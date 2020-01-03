@@ -1,0 +1,148 @@
+.top-hero-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFEE;
+}
+
+.top-hero-container {
+  padding-top: 130px;
+  font-family: ヒラギノ丸ゴ ProN;
+  h1 {
+    font-size: 60px;
+    color: #111111;
+  }
+}
+
+.row {
+  h3 {
+    font-size: 30px;
+    color: #0000BB; 
+    margin-top: 80px;
+  }
+}
+
+.btn-blue {
+  color: #DAA520;
+  border: 1px solid #000000;
+  width: 180px;
+  padding: 15px;
+  margin-top: 70px;
+  margin-left: 500px;
+  font-size: 20px;
+  background-color: #0000CC;
+
+  &:hover {
+    color: #FFD700;
+    border: 1px solid #888888;
+  }
+}
+
+.form-control {
+  height: 45px;
+}
+
+.users-new-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background-color: #FFFFEE;
+
+  .users-new-container {
+    padding-top: 130px;
+    font-family: ヒラギノ丸ゴ ProN;
+    h1 {
+    font-size: 40px;
+    color: #0000BB;
+  }
+    
+    .form-group {
+      margin-bottom: 20px;
+      color: #0000BB;
+    }
+  }
+}
+
+.btn-white {
+  height: 40px;
+  font-size: 18px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  &:hover {
+    color: #333333;
+    border: 1px solid #888888;
+    background-color: #EEEEEE;
+  }
+}
+
+.alert {
+  margin-bottom: 0px;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+}
+
+.navbar-transparent {
+  height: 60px;
+  position: relative;
+  background-color: rgba(0,0,0,0.5);
+  a {
+    color: #fff !important;
+  }
+  
+  h1 {
+    position: absolute;
+    font-family: ヒラギノ丸ゴ ProN;
+    color: #FFF;
+    padding: 0px;
+    margin-top: 15px;
+    margin-left: 470px;
+  }
+  
+  img {
+    position: absolute;
+    height: 40px;
+    padding: 0px;
+    margin-left: 40px;
+  }
+}
+
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  
+  &:hover {
+    color: #565656;
+    background-color: #B0E0E6; 
+  }
+}
+
+.question-new-wrapper {
+  padding-top: 120px;
+  padding-bottom: 450px;
+  background-color: #E0FFFF;
+}
+
+.question-index-wrapper {
+  padding-top: 70px;
+  background-color: #fafafa;
+  .question-index-single {
+    background-color: #fff;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    .question-autor {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    
+    .question-text {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+  }
+}
+

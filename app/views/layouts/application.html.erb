@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Domanda</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% flash.each do |key, value| %>
+     <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+     <% end %>
+     
+    <% if logged_in? %> 
+     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+       <div class="container">
+           <h1 class="text-black">domanda</h2>
+           <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to logout_path, method: :delete do %>
+                <%= image_tag "icons/logout.png" %>
+              <% end %>
+            </li>
+           </ul>
+       </div>
+     </nav>
+    <% end %>
+    <%= yield %>
+    
+<script>
+  $(function(){
+    $(".alert").fadeOut(5000);
+  });
+</script>    
+  </body>
+</html>
