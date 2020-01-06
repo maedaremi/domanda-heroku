@@ -4,7 +4,6 @@ class CreateCategories < ActiveRecord::Migration[5.2]
       t.string :category
 
       t.timestamps
-      add_reference :categories, :question_category
     end
   end
 end

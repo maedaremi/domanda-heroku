@@ -7,11 +7,9 @@
             <h2 class="question-author">
               <%= question.user.name %>
             </h2>
-            <%= question.categories.each do |question_category| %>
             <p class= "question-category">
-              <%= question_category.category.category %>
+              <%= question.category.category %>
             </p>
-            <% end %>
             <p class= "question-text">
               <%= question.question %>
             </p>
