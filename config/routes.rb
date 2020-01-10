@@ -8,11 +8,14 @@ Rails.application.routes.draw do
   resources :users
   resources :questions
   resources :categories
-  resources :question_categories
+  resources :answers
   
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'
   delete '/logout', to: 'sessions#destroy'
   
   root 'question#index'
+  
+  get 'questions/:id' => 'questions#show'
+  #get 'questions/:id' => 'answers#new'
 end
