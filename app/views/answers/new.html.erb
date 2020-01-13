@@ -1,15 +1,19 @@
 <div class="answer-new-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-md-offset-3">
-        <%= form_for @answer do |f| %>
+  <div class="question-index-single">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class= "question-text">
+              <%= simple_format(@question.question) %>
+          </div>
+              <%= form_for @answer do |f| %>
           <div class="form-group">
             <%= f.text_area :answer,:size=>"60x20", class: "form-control"  %>
             <%= f.hidden_field :question_id, :value => params[:question_id] %>
           </div>
           <%= f.submit '投稿', class: 'btn btn-black btn-block' %>
-        <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
-  </div>
 </div>

@@ -16,6 +16,5 @@ Rails.application.routes.draw do
   
   root 'question#index'
   
-  get 'questions/:id' => 'questions#show'
-  #get 'questions/:id' => 'answers#new'
+  #get 'questions/:id' => 'questions#show'
 end

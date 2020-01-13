@@ -1,6 +1,7 @@
 class AnswersController < ApplicationController
   def new
     @answer = Answer.new
+    @question = Question.find_by(params[:question_id])
   end
   
   def create
@@ -11,9 +12,20 @@ class AnswersController < ApplicationController
     else
       flash.now[:danger] = '入力内容を確認していください'
       render :new
-     #byebug
     end
   end
+  
+  def destroy
+    answer = Answer.find(params[:id])
+    
+    if answer.destroy
+      redirect_to question_path(answer.question_id), success: '削除しました'
+    else
+      flash.now[:danger] = '削除できませんでした'
+      render :new
+    end
+  end
+
   
   private
   def answer_params

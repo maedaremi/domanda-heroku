@@ -154,6 +154,14 @@
 .question-show-wrapper {
   padding-top: 70px;
   background-color: #fafafa;
+  
+  img {
+      margin-top: 20px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+      height: 40px;
+      width: 40px;
+    }
   .question-index-single {
     background-color: #fff;
     margin-top: 30px;
@@ -174,14 +182,6 @@
     .question-text {
       padding-right: 20px;
       padding-left: 20px;
-    }
-    
-    img {
-      margin-top: 20px;
-      margin-left: 10px;
-      margin-bottom: 10px;
-      height: 40px;
-      width: 40px;
     }
   }
   

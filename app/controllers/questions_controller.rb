@@ -5,9 +5,6 @@ class QuestionsController < ApplicationController
  
   def new
     @question = Question.new
-    #@question_category = QuestionCategory.new
-    #@question.question_categories.build
-    #@category = Category.new
   end
 
   def create
@@ -23,7 +20,18 @@ class QuestionsController < ApplicationController
   
   def show
     @question = Question.find(params[:id])
-    #@answer = Answer.new
+  end
+  
+  def destroy
+    @question = Question.find(params[:id])
+    
+    if @question.destroy
+     
+      redirect_to questions_path, success: '削除しました'
+    else
+      flash.now[:danger] = '削除できませんでした'
+      render :new
+    end
   end
   
   private 

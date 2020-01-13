@@ -13,9 +13,14 @@
             <div class= "question-text">
               <%= simple_format(@question.question) %>
             </div>
-            <div class = "answer-button">
+            <div class= "answer-button">
               <%= link_to new_answer_path(question_id: @question.id), method: :get do %>
-              <%= image_tag 'icons/comment.png',class: 'question-index-icon' %>
+              <p class = "btn btn-block btn-white">回答する</p>
+              <% end %>
+            </div>
+            <div class= "delete-button">
+              <%= link_to  question_path(@question.id), method: :delete do %>
+                <%= image_tag 'icons/delete.png', class: 'question-icon' %>
               <% end %>
             </div>
           </div>
@@ -25,16 +30,21 @@
   </div>
   
   <div class="container">
-    <% @question.answers.each do |a| %>
+    <% @question.answers.each do |answer| %>
       <div class="row">
        <div class="col-md-6 col-md-offset-3">
         <div class="question-answer">
          <p class="answer-author">
-          <%= a.user.name %>
+          <%= answer.user.name %>
          </p>
          <div class="answer-text">
-          <%= simple_format(a.answer) %>
+          <%= simple_format(answer.answer) %>
          </div>
+           <div class= "delete-button">
+              <%= link_to  answer_path(answer.id), method: :delete do %>
+                <%= image_tag 'icons/delete.png', class: 'question-icon' %>
+              <% end %>
+            </div>
         </div>
        </div>
       </div>
