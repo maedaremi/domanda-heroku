@@ -5,10 +5,15 @@ Rails.application.routes.draw do
   root 'pages#index'
   get 'pages/help'
   
-  resources :users
+  resources :users do
+    member do
+      get :following,:followers
+    end
+  end
   resources :questions
   resources :categories
   resources :answers
+  resources :relationships, only: [:create, :destroy]
   
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'
