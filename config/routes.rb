@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   resources :questions
   resources :categories
   resources :answers
-  resources :relationships, only: [:create, :destroy]
+  resources :relationships
+  #, only: [:create, :destroy]
   
   get    '/login',  to: 'sessions#new'
   post   '/login',  to: 'sessions#create'

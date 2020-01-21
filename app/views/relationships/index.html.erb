@@ -1,0 +1,18 @@
+<div class="relationship-index-wrapper">
+  <div class="container">
+    <% @relationship.each do |r| %>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="relationship-index-single">
+            <p class="follow-name">
+              <%= r.followed.name %>
+            </p>
+            <p class="follower-name">
+              <%= r.follower.name %>
+            </p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

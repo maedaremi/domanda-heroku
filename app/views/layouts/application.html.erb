@@ -17,8 +17,18 @@
     <% if logged_in? %> 
      <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
        <div class="container">
-           <h1 class="text-black">domanda</h2>
+           <h1 class="text-black">domanda</h1>
            <ul class="nav navbar-nav navbar-right">
+            <li>
+              <%= link_to questions_path do %>
+                <%= image_tag "icons/home.png" %>
+              <% end %>
+            </li>
+            <li>
+              <%= link_to new_question_path do %>
+                <%= image_tag "icons/question.png" %>
+                <% end %>
+            </li>
             <li>
               <%= link_to logout_path, method: :delete do %>
                 <%= image_tag "icons/logout.png" %>
