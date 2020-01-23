@@ -1,9 +1,4 @@
 class RelationshipsController < ApplicationController
-  #before_action :set_user
-  
-  #def index
-    #@relationship_following = current_user.relationship_following
-  #end
 
   def create
     user = User.find(params[:followed_id])
@@ -32,7 +27,6 @@ class RelationshipsController < ApplicationController
   private
 
   def set_user
-    #byebug
     user = User.find(params[:relationship][:followed_id])
   end
 

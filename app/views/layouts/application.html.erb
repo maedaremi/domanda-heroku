@@ -25,6 +25,11 @@
               <% end %>
             </li>
             <li>
+              <%= link_to user_path(current_user) do %>
+              <%= image_tag "icons/my.png" %>
+              <% end %>
+            </li>
+            <li>
               <%= link_to new_question_path do %>
                 <%= image_tag "icons/question.png" %>
                 <% end %>

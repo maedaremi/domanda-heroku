@@ -1,3 +1,7 @@
+body {
+  background-color: #fafafa;
+}
+
 .top-hero-wrapper {
   width: 100vw;
   height: 100vh;
@@ -82,7 +86,7 @@
 
 .navbar-transparent {
   height: 60px;
-  position: relative;
+  margin-bottom: 0px;
   background-color: rgba(0,0,0,0.5);
   a {
     color: #fff !important;
@@ -150,7 +154,8 @@
 
 .question-show-wrapper {
   padding-top: 70px;
-  background-color: #fafafa;
+  margin-bottom: 0px;
+  background-color: #fafafa; 
   
   img {
       margin-top: 20px;
@@ -181,6 +186,7 @@
       padding-left: 20px;
     }
   }
+
   
   .question-answer {
     background-color: #fff;
@@ -200,6 +206,7 @@
   }
 }
 
+
 .user-show-wrapper {
   padding-top: 70px;
   background-color: #fafafa;
@@ -208,3 +215,100 @@
   }
 }
 
+.answer-new-wrapper {
+  padding-top: 120px;
+  padding-bottom: 450px;
+  background-color: #E0FFFF;
+  
+  .question-text {
+    padding: 20px;
+    margin: 40px;
+    background-color: white;
+  }
+}
+
+.user-show-wrapper {
+  background-color: #fafafa;
+  
+  .user-show-single {
+    
+    .user-name {
+      margin-top: 5px;
+      margin-bottom: 60px;
+    }
+    
+    .follow-index {
+      margin-bottom: 40px;
+    }
+    
+    .my-question {
+      background-color: #fff;
+    margin-top: 30px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    
+    .user-question-category {
+      margin-top: 10px;
+      margin-left: 20px;
+      margin-bottom: 20px;
+      display: inline-block;
+      border: 1px solid #000000;
+    }
+    
+    .user-question {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    }
+  }
+}
+
+.user-show-follow-wrapper {
+  background-color: #fafafa;
+  .user_info {
+    margin-top: 60px;
+    margin-left: 60px;
+    color: #0000CC;
+  }
+  
+  .following-index {
+    background-color: #fff;
+    margin-top: 30px;
+    margin-left: 300px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    float: left;
+    
+    h3 {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 40px;
+    }
+    
+    .following-container {
+    background-color: #E6FFE9;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    }
+  }
+  
+  .follower-index {
+    background-color: #fff;
+    margin-top: 30px;
+    margin-right: 300px;
+    border: 1px solid #e6ecf0;
+    border-radius: 3px;
+    float: right;
+    
+    h3 {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 40px;
+    }
+    .follower-container {
+    background-color: #D7EEFF;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    }
+  }
+}

@@ -1,19 +1,29 @@
-<div class="row">
-  <aside class="col-md-4">
+<div class="user-show-follow-wrapper">
+  <div class="row">
     <section class="user_info">
       <h1><%= @user.name %></h1>
     </section>
-    <section class="stats">
-        <div class="user_avatars">
-          <% @user.each do |user| %>
-          <%= user.name %>
-        </div>
+    <div class="following-index">
+      <h3>フォロー中一覧</h3>
+     <% @user.following.each do |user| %>
+      <table>
+      <div class="following-container">
+        <h4><%= user.name %></h4>
+        <p><%= link_to '詳細', user_path(user) %></p>
+      </div>
+      </table>
       <% end %>
-    </section>
-  </aside>
-  <div class="col-md-8">
-    <h3><%= @title %></h3>
-      <ul class="users follow">
-        <%= render @user %>
-      </ul>
+    </div>
+    <div class="follower-index">
+       <h3>フォロワー一覧</h3>
+      <% @user.followers.each do |user| %>
+       <table>
+       <div class="follower-container" >
+         <h4><%= user.name %></h4> 
+         <p><%= link_to '詳細', user_path(user) %></p>
+       </div>
+       </table>
+       <% end %>
+    </div>
   </div>
+</div>
