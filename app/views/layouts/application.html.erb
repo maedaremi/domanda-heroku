@@ -11,11 +11,10 @@
 
   <body>
     <% flash.each do |key, value| %>
-     <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
-     <% end %>
+      <div class="alert alert-<%= key %>" role="alert"><%= value %></div>
+    <% end %>
      
-    
-     <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
+      <nav class="navbar navbar-default navbar-fixed-top navbar-transparent">
        <div class="container">
            <h1 class="text-black">domanda</h1>
            <ul class="nav navbar-nav navbar-right">
@@ -46,10 +45,10 @@
      </nav>
     <%= yield %>
     
-<script>
-  $(function(){
-    $(".alert").fadeOut(5000);
-  });
-</script>    
+    <script>
+     $(function(){
+      $(".alert").fadeOut(5000);
+     });
+    </script>
   </body>
 </html>
