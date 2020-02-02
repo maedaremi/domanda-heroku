@@ -48,7 +48,19 @@
                 <%= image_tag 'icons/delete.png', class: 'question-icon' %>
               <% end %>
             <% end %>
-            </div>
+           </div>
+           <div class= "favorite-button">
+             <% if !answer.favorite_users.include?(current_user) %>
+             <%= link_to favorites_path(answer_id: answer.id, question_id: answer.question_id), method: :post do %>
+               <%= image_tag 'icons/heart-black.png', class: 'question-icon' %>
+             <% end %>
+             <% else %>
+             <%= link_to favorites_path(answer_id: answer.id, question_id: answer.question_id), method: :delete do %>
+               <%= image_tag 'icons/heart-pink.png', class: 'question-icon' %>
+             <% end %>
+             <% end %>
+             <%= answer.favorite_users.count %>
+           </div>
         </div>
        </div>
       </div>

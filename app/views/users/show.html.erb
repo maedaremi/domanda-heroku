@@ -1,7 +1,6 @@
 <div class= "user-show-wrapper">
   <div class= "container">
     <div class= "row">
-      <div class="col-md-6 col-md-offset-3">
         <div class="user-show-single">
           <h3 class= "user-name">
             <%= @user.name %>
@@ -9,6 +8,7 @@
           <div class="follow-index">
             <%= link_to 'フォロー中・フォロワー' , following_user_path(@user) %>
           </div>
+          <div class="follow-button">
           <% unless current_user == @user %>
           <% if current_user.following?(@user) %>
             <%= form_for(current_user.active_relationships.find_by(followed_id: @user.id), html: { method: :delete }) do |f| %>
@@ -22,21 +22,42 @@
             <% end %>
           <% end %>
           <% end %>
+          </div>
+          <div class='favorite-index'>
+            <% if logged_in? && @user.id == current_user.id %>
+            <%= link_to 'いいね一覧', favorites_index_path %>
+            <% end %>
+          </div>
+          <div class="question-index">
+            <h4>質問一覧</h4>
           <% @user.questions.each do |question| %>
           <div class="my-question">
-          <div class="user-question-category">
+           <div class="user-question-category">
             <%= question.category.category %>
-          </div>
-          <div class="user-question">
+           </div>
+           <div class="user-question">
             <%= question.question %>
-          </div>
-          <div class= "details">
-              <%= link_to '詳細', question_path(question.id), class: 'btn btn-block btn-white' %>
-          </div>
+           </div>
+           <div class= "details">
+            <%= link_to '詳細', question_path(question.id), class: 'btn btn-block btn-white' %>
+           </div>
           </div>
           <% end %>
+          </div>
+          <div class="answer-index">
+            <h4>回答一覧</h4>
+          <% @user.answers.each do |answer| %>
+          <div class="my-answer">
+           <div class="user-answer">
+             <%= answer.answer %>
+           </div>
+           <div class="details">
+             <%= link_to '詳細', question_path(answer.question_id), class: 'btn btn-block btn-white' %>
+           </div>
+          </div>
+          <% end %>
+          </div>
         </div>
-      </div>
     </div>
   </div>
 </div>

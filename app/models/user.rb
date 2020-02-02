@@ -8,6 +8,8 @@ class User < ApplicationRecord
   
   has_many :questions
   has_many :answers
+  has_many :favorites
+  has_many :favorite_answers, through: :favorites, source: 'answer'
   has_many :active_relationships, class_name: "Relationship",
                     foreign_key:"follower_id",
                     dependent: :destroy

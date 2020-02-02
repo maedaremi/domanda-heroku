@@ -17,7 +17,7 @@ class AnswersController < ApplicationController
   
   def destroy
     answer = Answer.find(params[:id])
-    
+    #byebug
     if answer.destroy
       redirect_to question_path(answer.question_id), success: '削除しました'
     else

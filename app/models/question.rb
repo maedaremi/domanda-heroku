@@ -5,7 +5,7 @@ class Question < ApplicationRecord
   
   belongs_to :user
   belongs_to :category
-  has_many :answers
+  has_many :answers, dependent: :destroy
   #has_many :question_categories
   #has_many :categories, through: :question_categories
   #accepts_nested_attributes_for :question_categories
