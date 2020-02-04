@@ -2,6 +2,7 @@
   <div class= "container">
     <div class= "row">
         <div class="user-show-single">
+          <div class="user-show-container">
           <h3 class= "user-name">
             <%= @user.name %>
           </h3>
@@ -27,6 +28,7 @@
             <% if logged_in? && @user.id == current_user.id %>
             <%= link_to 'いいね一覧', favorites_index_path %>
             <% end %>
+          </div>
           </div>
           <div class="question-index">
             <h4>質問一覧</h4>

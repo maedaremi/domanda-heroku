@@ -1,28 +1,55 @@
 body {
-  background-color: #fafafa;
-}
-
-.top-hero-wrapper {
   width: 100vw;
   height: 100vh;
-  background-color: #FFFFEE;
+  background-image: url('answer.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: rgba(0,0,0,0.5);
 }
 
+.bg {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('question.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    position: relative;
+    
+  }
+  
+  .bg::before {
+    content: ' ';
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+ 
 .top-hero-container {
+  position: absolute;
   padding-top: 130px;
   font-family: ヒラギノ丸ゴ ProN;
+  
   h1 {
     font-size: 60px;
-    color: #111111;
+    color: #FFF;
+    margin-left: 250px;
   }
-}
-
-.row {
+  .row {
+  position: absolute;
   h3 {
     font-size: 30px;
-    color: #0000BB; 
+    color: #FFF; 
     margin-top: 80px;
+    margin-left: 420px;
   }
+ }
 }
 
 .btn-blue {
@@ -31,7 +58,7 @@ body {
   width: 180px;
   padding: 15px;
   margin-top: 70px;
-  margin-left: 500px;
+  margin-left: 625px;
   font-size: 20px;
   background-color: #0000CC;
 
@@ -40,27 +67,41 @@ body {
     border: 1px solid #888888;
   }
 }
+  
 
 .form-control {
   height: 45px;
 }
 
 .users-new-wrapper {
-  width: 100vw;
-  height: 100vh;
-  background-color: #FFFFEE;
+  
 
   .users-new-container {
     padding-top: 130px;
     font-family: ヒラギノ丸ゴ ProN;
+    
     h1 {
     font-size: 40px;
-    color: #0000BB;
+    color: #FFF;
   }
     
     .form-group {
       margin-bottom: 20px;
-      color: #0000BB;
+      color: #FFF;
+    }
+    
+    .btn-white { 
+     height: 40px;
+     font-size: 18px;
+     margin-top: 30px;
+     margin-bottom: 20px;
+     background-color: rgba(0,0,0,0.2);
+     color: #FFF;
+      &:hover {
+       color: #C0C0C0;
+       border: 1px solid #888888;
+       background-color: rgba(0,0,0,0.2);
+      }
     }
   }
 }
@@ -87,9 +128,9 @@ body {
 .navbar-transparent {
   height: 60px;
   margin-bottom: 0px;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(255,255,255,0.8);
   a {
-    color: #fff !important;
+    color: #0000CC !important;
   }
   
   .navbar-brand {
@@ -102,16 +143,19 @@ body {
   h1 {
     position: absolute;
     font-family: ヒラギノ丸ゴ ProN;
-    color: #FFF;
+    color: #0000CC;
     padding: 0px;
     margin-top: 15px;
     margin-left: 470px;
   }
   
   img {
-    height: 40px;
+    height: 35px;
+    width: 35px;
+    margin-left: 20px;
   }
 }
+
 
 .btn-black {
   color: #565656;
@@ -126,17 +170,29 @@ body {
   }
 }
 
+.btn-black {
+  color: #565656;
+  border: 1px solid #565656;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 20px;
+  
+  &:hover {
+    color: #565656;
+    background-color: #C0C0C0; 
+  }
+}
+
 .question-new-wrapper {
   padding-top: 120px;
   padding-bottom: 450px;
-  background-color: #E0FFFF;
+  background-color: #808080;
 }
 
 .question-index-wrapper {
   padding-top: 70px;
-  background-color: #fafafa;
   .question-index-single {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.9);
     margin-top: 30px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
@@ -160,9 +216,7 @@ body {
 }
 
 .question-show-wrapper {
-  padding-top: 70px;
   margin-bottom: 0px;
-  background-color: #fafafa; 
   
   img {
       margin-top: 20px;
@@ -172,9 +226,9 @@ body {
       width: 40px;
     }
   .question-index-single {
-    background-color: #fff;
-    margin-top: 30px;
-    border: 1px solid #e6ecf0;
+    background-color: #FFF;
+    margin-top: 100px;
+    border: 2px solid #0000CC;
     border-radius: 3px;
     .question-author {
       font-size: 25px;
@@ -196,9 +250,9 @@ body {
 
   
   .question-answer {
-    background-color: #fff;
+    background-color: #FFF;
     margin-top: 30px;
-    border: 1px solid #e6ecf0;
+    border: 2px solid #0000CC;
     border-radius: 3px;
     
     .answer-author {
@@ -214,33 +268,35 @@ body {
 }
 
 
+
+  .answer-new-wrapper {
+    padding-top: 120px;
+    padding-bottom: 450px;
+    background-color: #808080;
+  
+    .question-text {
+      padding: 20px;
+      margin: 40px;
+      background-color: #DDDDDD;
+      border: 1px solid black;
+    }
+  }
+
+
 .user-show-wrapper {
   padding-top: 70px;
-  background-color: #fafafa;
   .user-show-single {
     color: black;
-  }
-}
-
-.answer-new-wrapper {
-  padding-top: 120px;
-  padding-bottom: 450px;
-  background-color: #E0FFFF;
-  
-  .question-text {
-    padding: 20px;
-    margin: 40px;
-    background-color: white;
-  }
-}
-
-.user-show-wrapper {
-  background-color: #fafafa;
-  
-  .user-show-single {
     
+    .user-show-container {
+      background-color: #D9E5FF;
+      padding-left: 20px;
+      padding-bottom: 3px;
+      margin-bottom: 40px;
+      border: 4px solid #0000CC;
+    }
     h4 {
-      color: #0000CC;
+      color: #FFF;
     }
     
     .user-name {
@@ -254,7 +310,7 @@ body {
     
     .follow-button {
       width: 300px;
-      margin-bottom: 40px;
+    
     }
     
     .favorite-index {
@@ -266,7 +322,7 @@ body {
     
     .my-question {
       width: 500px;
-      background-color: #fff;
+      background-color: rgba(255,255,255,0.9);
       margin-top: 30px;
       border: 1px solid #e6ecf0;
       border-radius: 3px;
@@ -292,7 +348,7 @@ body {
     
     .my-answer {
       width: 500px;
-      background-color: #fff;
+      background-color: rgba(255,255,255,0.9);
       margin-top: 30px;
       border: 1px solid #e6ecf0;
       border-radius: 3px;
@@ -308,15 +364,14 @@ body {
 }
 
 .user-show-follow-wrapper {
-  background-color: #fafafa;
   .user_info {
     margin-top: 60px;
     margin-left: 60px;
-    color: #0000CC;
+    color: #FFF;
   }
   
   .following-index {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.9);
     margin-top: 30px;
     margin-left: 300px;
     border: 1px solid #e6ecf0;
@@ -327,17 +382,18 @@ body {
     padding-left: 60px;
     padding-right: 60px;
     margin-bottom: 40px;
+    color: #0000CC;
     }
     
     .following-container {
-    background-color: #E6FFE9;
+    background-color: #D9E5FF;
     padding-left: 20px;
     margin-bottom: 10px;
     }
   }
   
   .follower-index {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.9);
     margin-top: 30px;
     margin-right: 300px;
     border: 1px solid #e6ecf0;
@@ -348,9 +404,10 @@ body {
     padding-left: 60px;
     padding-right: 60px;
     margin-bottom: 40px;
+    color: #0000CC;
     }
     .follower-container {
-    background-color: #D7EEFF;
+    background-color: #D9E5FF;
     padding-left: 20px;
     margin-bottom: 10px;
     }
@@ -359,11 +416,10 @@ body {
 
 .favorite-index-wrapper {
   padding-top: 70px;
-  background-color: #fafafa;
 
 
   .favorite-index-single {
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.9);
     margin-top: 30px;
     border: 1px solid #e6ecf0;
     border-radius: 3px;
