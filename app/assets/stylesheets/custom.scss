@@ -13,7 +13,7 @@ body {
     width: 100vw;
     height: 100vh;
     background-image: url('question.jpg');
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -42,7 +42,7 @@ body {
     margin-left: 250px;
   }
   .row {
-  position: absolute;
+
   h3 {
     font-size: 30px;
     color: #FFF; 
@@ -52,22 +52,40 @@ body {
  }
 }
 
-.btn-blue {
-  color: #DAA520;
-  border: 1px solid #000000;
-  width: 180px;
+.btn-session {
+  color: #FFF;
+  border: 1px solid #FFF;
+  width: 400px;
   padding: 15px;
-  margin-top: 70px;
-  margin-left: 625px;
+  margin-top: 300px;
+  margin-right: 0px;
   font-size: 20px;
-  background-color: #0000CC;
+  background-color: rgba(0,0,0,0.5);
+  float: right;
 
   &:hover {
-    color: #FFD700;
+    color: #AAAAAA;
     border: 1px solid #888888;
   }
 }
-  
+
+.btn-user {
+  color: #FFF;
+  border: 1px solid #FFF;
+  width: 400px;
+  margin-top: 300px;
+  margin-left: 250px;
+  padding: 15px;
+  font-size: 20px;
+  background-color: rgba(0,0,0,0.5);
+  float: left;
+
+  &:hover {
+    color: #AAAAAA;
+    border: 1px solid #888888;
+  }
+}
+
 
 .form-control {
   height: 45px;
@@ -130,7 +148,7 @@ body {
   margin-bottom: 0px;
   background-color: rgba(255,255,255,0.8);
   a {
-    color: #0000CC !important;
+    color: #111111 !important;
   }
   
   .navbar-brand {
@@ -143,10 +161,11 @@ body {
   h1 {
     position: absolute;
     font-family: ヒラギノ丸ゴ ProN;
-    color: #0000CC;
+    color: #111111;
     padding: 0px;
-    margin-top: 15px;
-    margin-left: 470px;
+    margin-top: 0px;
+    margin-left: 420px;
+    font-size: 60px;
   }
   
   img {
@@ -186,7 +205,10 @@ body {
 .question-new-wrapper {
   padding-top: 120px;
   padding-bottom: 450px;
-  background-color: #808080;
+  
+  .category {
+    color: #FFF;
+  }
 }
 
 .question-index-wrapper {
@@ -204,6 +226,8 @@ body {
     
     .question-category {
       margin-left: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
       display: inline-block;
       border: 1px solid #000000;
     }
@@ -238,6 +262,8 @@ body {
     
     .question-category {
       margin-left: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
       display: inline-block;
       border: 1px solid #000000;
     }
@@ -272,7 +298,6 @@ body {
   .answer-new-wrapper {
     padding-top: 120px;
     padding-bottom: 450px;
-    background-color: #808080;
   
     .question-text {
       padding: 20px;
@@ -289,11 +314,11 @@ body {
     color: black;
     
     .user-show-container {
-      background-color: #D9E5FF;
+      background-color: #CCCCCC;
       padding-left: 20px;
       padding-bottom: 3px;
       margin-bottom: 40px;
-      border: 4px solid #0000CC;
+      border: 4px solid #111111;
     }
     h4 {
       color: #FFF;
@@ -302,6 +327,7 @@ body {
     .user-name {
       margin-top: 5px;
       margin-bottom: 60px;
+      font-size: 30px;
     }
     
     .follow-index {
@@ -331,6 +357,8 @@ body {
       margin-top: 10px;
       margin-left: 20px;
       margin-bottom: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
       display: inline-block;
       border: 1px solid #000000;
     }
@@ -382,11 +410,11 @@ body {
     padding-left: 60px;
     padding-right: 60px;
     margin-bottom: 40px;
-    color: #0000CC;
+    color: #111111;
     }
     
     .following-container {
-    background-color: #D9E5FF;
+    background-color: #CCCCCC;
     padding-left: 20px;
     margin-bottom: 10px;
     }
@@ -404,10 +432,10 @@ body {
     padding-left: 60px;
     padding-right: 60px;
     margin-bottom: 40px;
-    color: #0000CC;
+    color: #111111;
     }
     .follower-container {
-    background-color: #D9E5FF;
+    background-color: #CCCCCC;
     padding-left: 20px;
     margin-bottom: 10px;
     }
