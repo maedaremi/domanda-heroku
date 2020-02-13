@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   resources :categories
   resources :answers
   resources :relationships
+  resources :requests
+  
+  #get    'requests/new'
+  #post   '/requests', to: 'requests#create'
   #, only: [:create, :destroy]
   
   get    'favorites/index'

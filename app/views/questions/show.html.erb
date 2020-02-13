@@ -18,6 +18,13 @@
               <p class = "btn btn-block btn-white">回答する</p>
               <% end %>
             </div>
+            <div class="request-user">
+              <% if logged_in? && @question.user_id == current_user.id %>
+              <% @question.requests.each do |request| %>
+              <p><%= request.user.name %>さんにリクエスト済</p>
+              <% end %>
+              <% end %>
+            </div>
             <div class= "delete-button">
             　<% if logged_in? && @question.user_id == current_user.id %>
               　<%= link_to  question_path(@question.id), method: :delete do %>
@@ -42,13 +49,6 @@
          <div class="answer-text">
           <%= simple_format(answer.answer) %>
          </div>
-           <div class= "delete-button">
-            <% if logged_in? && answer.user_id == current_user.id %>
-              <%= link_to  answer_path(answer.id), method: :delete do %>
-                <%= image_tag 'icons/delete.png', class: 'question-icon' %>
-              <% end %>
-            <% end %>
-           </div>
            <div class= "favorite-button">
              <% if !answer.favorite_users.include?(current_user) %>
              <%= link_to favorites_path(answer_id: answer.id, question_id: answer.question_id), method: :post do %>
@@ -60,6 +60,13 @@
              <% end %>
              <% end %>
              <%= answer.favorite_users.count %>
+           </div>
+           <div class= "delete-button">
+            <% if logged_in? && answer.user_id == current_user.id %>
+              <%= link_to  answer_path(answer.id), method: :delete do %>
+                <%= image_tag 'icons/delete.png', class: 'question-icon' %>
+              <% end %>
+            <% end %>
            </div>
         </div>
        </div>
