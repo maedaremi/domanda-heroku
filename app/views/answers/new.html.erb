@@ -6,7 +6,7 @@
           <div class= "question-text">
               <%= simple_format(@question.question) %>
           </div>
-              <%= form_for @answer do |f| %>
+          <%= form_for @answer do |f| %>
           <div class="form-group">
             <%= f.text_area :answer,:size=>"60x20", class: "form-control"  %>
             <%= f.hidden_field :question_id, :value => params[:question_id] %>

@@ -4,24 +4,24 @@
      <div class="explanation">
       <h1>回答リクエスト</h1>
       <p><%= @user.name %>さんに答えてほしい質問を選択してください</p>
-      </div>
-      <div class="question-index">
-        <% current_user.questions.each do |question| %>
-        <div class="my-question">
-          <div class="request-question-category">
-           <%= question.category.category %>
-          </div>
-          <div class="request-question">
-           <%= question.question %>
-          </div>
-          <div class= "details">
-           <%= link_to requests_path(question_id: question.id, user_id: @user.id), method: :post do %>
-           <p class= "btn btn-block btn-white">選択する</p>
-           <% end %>
-          </div>
+     </div>
+     <div class="question-index">
+      <% current_user.questions.each do |question| %>
+      <div class="my-question">
+        <div class="request-question-category">
+          <%= question.category.category %>
         </div>
-        <% end %>
+        <div class="request-question">
+          <%= question.question %>
+        </div>
+        <div class= "details">
+          <%= link_to requests_path(question_id: question.id, user_id: @user.id), method: :post do %>
+           <p class= "btn btn-block btn-white">選択する</p>
+          <% end %>
+        </div>
       </div>
+      <% end %>
+     </div>
     </div>
   </div>
 </div>

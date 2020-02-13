@@ -15,14 +15,14 @@
             </div>
             <div class= "answer-button">
               <%= link_to new_answer_path(question_id: @question.id), method: :get do %>
-              <p class = "btn btn-block btn-white">回答する</p>
+               <p class = "btn btn-block btn-white">回答する</p>
               <% end %>
             </div>
             <div class="request-user">
               <% if logged_in? && @question.user_id == current_user.id %>
-              <% @question.requests.each do |request| %>
-              <p><%= request.user.name %>さんにリクエスト済</p>
-              <% end %>
+               <% @question.requests.each do |request| %>
+                <p><%= request.user.name %>さんにリクエスト済</p>
+               <% end %>
               <% end %>
             </div>
             <div class= "delete-button">
@@ -40,9 +40,9 @@
   
   <div class="container">
     <% @question.answers.each do |answer| %>
-      <div class="row">
-       <div class="col-md-6 col-md-offset-3">
-        <div class="question-answer">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+       <div class="question-answer">
          <p class="answer-author">
           <%= link_to answer.user.name ,user_path(answer.user_id) %>
          </p>
@@ -51,15 +51,15 @@
          </div>
            <div class= "favorite-button">
              <% if !answer.favorite_users.include?(current_user) %>
-             <%= link_to favorites_path(answer_id: answer.id, question_id: answer.question_id), method: :post do %>
+              <%= link_to favorites_path(answer_id: answer.id, question_id: answer.question_id), method: :post do %>
                <%= image_tag 'icons/heart-black.png', class: 'question-icon' %>
-             <% end %>
+              <% end %>
              <% else %>
-             <%= link_to favorites_path(answer_id: answer.id, question_id: answer.question_id), method: :delete do %>
+              <%= link_to favorites_path(answer_id: answer.id, question_id: answer.question_id), method: :delete do %>
                <%= image_tag 'icons/heart-pink.png', class: 'question-icon' %>
+              <% end %>
              <% end %>
-             <% end %>
-             <%= answer.favorite_users.count %>
+            <%= answer.favorite_users.count %>
            </div>
            <div class= "delete-button">
             <% if logged_in? && answer.user_id == current_user.id %>
@@ -68,9 +68,9 @@
               <% end %>
             <% end %>
            </div>
-        </div>
        </div>
       </div>
+    </div>
     <% end %>
   </div>
 </div>

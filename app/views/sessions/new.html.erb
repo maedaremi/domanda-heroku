@@ -1,9 +1,9 @@
 <div class="users-new-wrapper">
   <div class="bg">
-  <div class="container">
+   <div class="container">
     <div class="row">
-      <div class="col-md-offset-4 col-md-4 users-new-container">
-        <h1 class="text-center text-blue">ログイン</h1>
+     <div class="col-md-offset-4 col-md-4 users-new-container">
+      <h1 class="text-center text-blue">ログイン</h1>
         <%= form_for :session, url: login_path do |f| %>
           <div class="form-group">
             <%= f.label :email, class: "text-blue" %>
@@ -17,7 +17,7 @@
           <%= f.submit "ログイン", class: "btn-block btn-white" %>
         <% end %>
       </div>
-    </div>
-  </div>
+     </div>
+   </div>
   </div>
 </div>

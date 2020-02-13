@@ -4,23 +4,24 @@
       <h1>回答リクエスト受信一覧</h1>
     </div>
     <div class="row">
-    <div class="question-index">
-    <% @request_questions. each do |question| %>
-        <div class="question-index-single">
-          <p class="question-author">
-            <%= link_to question.user.name , user_path(question.user_id) %>
-          </p>
-          <p class= "question-category">
-            <%= question.category.category %>
-          </p>
-          <div class= "question-text">
-            <%= simple_format(question.question) %>
-          </div>
-          <div class= "details">
-            <%= link_to '詳細', question_path(question.id), class: 'btn btn-block btn-white' %>
-          </div>
-          <% end %>
+     <div class="question-index">
+      <% @request_questions. each do |question| %>
+      <div class="question-index-single">
+        <p class="question-author">
+          <%= link_to question.user.name , user_path(question.user_id) %>
+        </p>
+        <p class= "question-category">
+          <%= question.category.category %>
+        </p>
+        <div class= "question-text">
+          <%= simple_format(question.question) %>
+        </div>
+        <div class= "details">
+          <%= link_to '詳細', question_path(question.id), class: 'btn btn-block btn-white' %>
         </div>
       </div>
+      <% end %>
+     </div>
+    </div>
   </div>
 </div>
